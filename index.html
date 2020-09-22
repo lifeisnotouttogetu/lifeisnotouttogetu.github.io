@@ -172,13 +172,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>安装Git<br>打开Git官网（<a target="_blank" rel="noopener" href="https://www.git-scm.com/download/%EF%BC%89%EF%BC%8C%E4%B8%8B%E8%BD%BDgit%E5%AE%89%E8%A3%85%E5%8C%85%E3%80%82">https://www.git-scm.com/download/），下载git安装包。</a><br>打开下载好的exe文件，全部默认设置，全选next就好了。安装好git后，在桌面或者任意文件夹内右键,菜单栏能够看到Git Bash Here选项说明安装成功。<br>打开Git Bash Here。</p>
-<p>安装Node.js<br>打开Node.js下载网页（<a target="_blank" rel="noopener" href="https://nodejs.org/en/%EF%BC%89%EF%BC%8C%E9%80%89%E6%8B%A9LTS%E9%95%BF%E6%9C%9F%E6%94%AF%E6%8C%81%E7%89%88%E4%B8%8B%E8%BD%BD%E3%80%82">https://nodejs.org/en/），选择LTS长期支持版下载。</a><br>打开下载好的安装包，一路next安装。装完可以node -v查看是否安装成功和安装版本。</p>
-<h2 id="hexo的下载"><a href="#hexo的下载" class="headerlink" title="hexo的下载"></a>hexo的下载</h2><p>新建一个文件夹命名为blog</p>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>安装Git<br>打开Git官网（<a target="_blank" rel="noopener" href="https://www.git-scm.com/download/">https://www.git-scm.com/download/</a> ），下载git安装包。<br>打开下载好的exe文件，全部默认设置，全选next就好了。安装好git后，在桌面或者任意文件夹内右键,菜单栏能够看到Git Bash Here选项说明安装成功。<br><img src="/image/右键菜单栏.png" alt="图片加载失败，请刷新试试" height="250px"><br>打开Git Bash Here。<br><img src="/image/gitbase.png" alt="图片加载失败，请刷新试试" height="200px"></p>
+<p>安装Node.js<br>打开Node.js下载网页（<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a> ），选择LTS长期支持版下载。<br><img src="/image/node版本.png" alt="图片加载失败，请刷新试试"  height="250px"><br>打开下载好的安装包，一路next安装。装完可以node -v查看是否安装成功和安装版本。</p>
+<h2 id="hexo的下载"><a href="#hexo的下载" class="headerlink" title="hexo的下载"></a>hexo的下载</h2><p>新建一个文件夹命名为blog，作为hexo博客的文件夹，以后配置出现问题可以直接删文件夹重新建。在blog文件夹下右键进入git，输入npm install -g hexo-cli安装hexo客户端。原路径下载可能会很慢，这里我们选择淘宝的镜像可以正常下载（npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> )，设置完镜像后即可正常下载安装。</p>
 <hr>
-<h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><p>内容</p>
+<h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><p>我们在blog目录下初始化hexo。git中输入hexo init，对hexo进行初始化操作,这会在blog文件夹下自动创建一个hexo项目。<br><image src="/image/初始化文件.png" alt="图片加载失败，请刷新试试" height="300px"><br>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题<br>_config.yml：整个博客的配置<br>我们再次输入hexo s(hexo server，启动服务器)，这时可以看到提示Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 。说明hexo启动成功，打开浏览器输入localhost:4000即可看到hexo默认页面。Ctrl+C关闭服务器。<img src="/image/hexo s.png"  alt="图片加载失败，请刷新试试"></p>
 <hr>
-<h2 id="hexo博客"><a href="#hexo博客" class="headerlink" title="hexo博客"></a>hexo博客</h2><p>内容</p>
+<h2 id="hexo博客推送到github"><a href="#hexo博客推送到github" class="headerlink" title="hexo博客推送到github"></a>hexo博客推送到github</h2><p>先登陆github官方网站注册一个github账号，我们登陆账号，在右上角找到个人头像，点开菜单栏，选择your repositories,打开个人仓库列表，然后新建一个仓库，仓库名为你的注册名字.github.io，仓库访问权限默认公开，我们后面会把hexo博客中的文件全部上传部署到这个仓库中。<br><image src="/image/github菜单栏.png" alt="图片加载失败，请刷新试试" height="250px"><image src="/image/个人仓库列表.png" alt="图片加载失败，请刷新试试" height="230px"><br><image src="/image/新建仓库.png" alt="图片加载失败，请刷新试试" height="300px"></p>
+<p>我们记下新仓库的网址，后面将会将hexo中的东西推送进这个仓库。其实在这个仓库中我们就已经可以新建一个网页了，在Settings设置页面中我们找到Github Pages设置，这里可以选择页面主题，当我们选择好一个主题时，github会自动帮我们在仓库中创建一个index.html索引网页，我们可以直接修改这个网页，并且可以通过仓库名用浏览器访问到这个页面。</p>
+<p>打开gitbase，进入blog目录下安装git的部署插件，输入 npm install –save hexo-deployer-git 。安装完插件后，需要设置blog目录下的_config.yml配置文件，在文件的最底部有个deployment配置。设置type为git,windows系统git要加单引号。repo为仓库地址，格式是<a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a> 。yourname填你的github账号名。branch默认为master。<br><image src="/image/config配置.png" alt="图片加载失败，请刷新试试" height="150px"></p>
+<p>修改好_config.yml配置文件后就可以将hexo博客的内容全部部署到github上，在blog路径下打开gitbase，输入hexo d(deploy)即可自动部署，这时会要求你输入github的账号和密码，输入账号密码等部署完成后即可在github仓库中看到hexo项目，这时我们可以直接通过仓库名访问我们的hexo博客了。<br><image src="/image/仓库中的hexo.png" alt="图片加载失败，请刷新试试" height="200px"></p>
 <hr>
 
       
