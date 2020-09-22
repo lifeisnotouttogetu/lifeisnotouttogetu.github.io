@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://example.com/image/node版本.png">
 <meta property="og:image" content="http://example.com/image/hexo%20s.png">
 <meta property="article:published_time" content="2020-09-21T06:39:52.000Z">
-<meta property="article:modified_time" content="2020-09-22T12:23:06.202Z">
+<meta property="article:modified_time" content="2020-09-22T12:28:20.867Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/image/右键菜单栏.png">
@@ -188,7 +188,7 @@
 <h2 id="hexo博客推送到github"><a href="#hexo博客推送到github" class="headerlink" title="hexo博客推送到github"></a>hexo博客推送到github</h2><p>先登陆github官方网站注册一个github账号，我们登陆账号，在右上角找到个人头像，点开菜单栏，选择your repositories,打开个人仓库列表，然后新建一个仓库，仓库名为你的注册名字.github.io，仓库访问权限默认公开，我们后面会把hexo博客中的文件全部上传部署到这个仓库中。<br><image src="/image/github菜单栏.png" alt="图片加载失败，请刷新试试" height="250px"><image src="/image/个人仓库列表.png" alt="图片加载失败，请刷新试试" height="230px"><br><image src="/image/新建仓库.png" alt="图片加载失败，请刷新试试" height="300px"></p>
 <p>我们记下新仓库的网址，后面将会将hexo中的东西推送进这个仓库。其实在这个仓库中我们就已经可以新建一个网页了，在Settings设置页面中我们找到Github Pages设置，这里可以选择页面主题，当我们选择好一个主题时，github会自动帮我们在仓库中创建一个index.html索引网页，我们可以直接修改这个网页，并且可以通过仓库名用浏览器访问到这个页面。</p>
 <p>打开gitbase，进入blog目录下安装git的部署插件，输入 npm install –save hexo-deployer-git 。安装完插件后，需要设置blog目录下的_config.yml配置文件，在文件的最底部有个deployment配置。设置type为git,windows系统git要加单引号。repo为仓库地址，格式是<a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a> 。yourname填你的github账号名。branch默认为master。<br><image src="/image/config配置.png" alt="图片加载失败，请刷新试试" height="150px"></p>
-<p>修改好_config.yml配置文件后就可以将hexo博客的内容全部部署到github上，在blog路径下打开gitbase，输入hexo d(deploy)即可自动部署，这时会要求你输入github的账号和密码，输入账号密码等部署完成后即可在github仓库中看到hexo项目，这时我们可以直接通过仓库名访问我们的hexo博客了。<br><image src="/image/仓库中的hexo.png" alt="图片加载失败，请刷新试试" height="200px"></p>
+<p>修改好_config.yml配置文件后就可以将hexo博客的内容全部部署到github上，在blog路径下打开gitbase，输入hexo d(deploy)即可自动部署，这时会要求你输入github的账号和密码，输入账号密码等部署完成后即可在github仓库中看到hexo项目，这时我们可以直接通过仓库名访问我们的hexo博客了。<br><image src="/image/仓库中的hexo.png" alt="图片加载失败，请刷新试试" height="200px"><br><image src="/image/成功部署打开.png" alt="图片加载失败，请刷新试试" height="200px"></p>
 <hr>
 
       
